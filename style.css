@@ -1,0 +1,87 @@
+.des {
+    padding: 10px;
+}
+
+.strongShadow {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.midShadow {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.lightShadow {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.bottomToTop {
+    animation: 0.5s bottomToTop forwards;
+    transform: translate(0px);
+}
+
+@keyframes bottomToTop {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    } 99% {
+        transform: translateY(200px);
+        opacity: 0;
+        visibility: visible;
+    }
+    100% {
+        transform: translateY(200px);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.topToBottom {
+    animation: 0.5s topToBottom forwards;
+}
+
+@keyframes topToBottom {
+    0% {
+        transform: translateY(-300px);
+        opacity: 0;
+    } 100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+}
+
+.poke {
+    animation: poke 2s infinite;
+}
+
+@keyframes poke {
+    0% {
+        rotate: 0deg;
+    }
+    45% {
+        transform: translateX(-0rem)
+    }
+    50% {
+        transform: translateX(-2.5rem);
+    } 
+    82% {
+        transform: translateX(-0rem);
+    }
+}
+
+.shake {
+    animation: shake 2s infinite;
+}
+
+@keyframes shake {
+    0% {
+        rotate: 0deg;
+    }
+    50% {
+        rotate: 0deg;
+    } 66% {
+        rotate: 30deg;
+    } 82% {
+        rotate: -10deg;
+
+    } 100% {
+        rotate: 0deg;
+    }
+}
